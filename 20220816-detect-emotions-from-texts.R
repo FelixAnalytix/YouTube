@@ -20,7 +20,7 @@ library(tidyverse)
 # Get data ----------------------------------------------------------------
 
 text_raw <- read_lines(
-  file = "http://gutenberg.net.au/ebooks01/0100021.txt",
+  file = "http://gutenberg.net.au/ebooks01/0100021.txt", #also at "data/orwell-text.txt"
   skip_empty_rows = TRUE,
   skip = 38, # remove metadata about book
   n_max = 8500) # remove appendix
