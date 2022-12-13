@@ -44,5 +44,3 @@ jobs:
           install.packages("testthat")
           list_r_files <- list.files(pattern = ".R$|.r$")
           sapply(list_r_files, testthat::test_file)
-        with:
-          upload-snapshots: true
