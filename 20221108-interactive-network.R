@@ -8,6 +8,7 @@ if (!require(tidyverse)) install.packages("tidyverse")
 if (!require(rvest)) install.packages("rvest")
 if (!require(tidygraph)) install.packages("tidygraph")
 if (!require(visNetwork)) install.packages("visNetwork")
+if (!require(visNetwork)) install.packages("visNetwork")
 
 
 # Attach R packages -------------------------------------------------------
@@ -16,6 +17,7 @@ library(tidyverse)
 library(rvest) # web scraping
 library(tidygraph) # network analysis
 library(visNetwork) # interactive network visualization
+library(janitor) # for row_to_names() function
 
 
 # Get Marvel Characters Data from Wikipedia -------------------------------
