@@ -8,7 +8,7 @@ if (!require(tidyverse)) install.packages("tidyverse")
 if (!require(rvest)) install.packages("rvest")
 if (!require(tidygraph)) install.packages("tidygraph")
 if (!require(visNetwork)) install.packages("visNetwork")
-if (!require(visNetwork)) install.packages("visNetwork")
+if (!require(janitor)) install.packages("janitor")
 
 
 # Attach R packages -------------------------------------------------------
