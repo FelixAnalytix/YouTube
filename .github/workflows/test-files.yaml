@@ -43,5 +43,5 @@ jobs:
         run: |
           install.packages("testthat")
           list_r_files <- list.files(pattern = ".R$|.r$")
-          map(list_r_files, testthat::test_file)
+          sapply(list_r_files, testthat::test_file)
         shell: Rscript {0}
