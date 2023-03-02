@@ -17,6 +17,7 @@ library(scales) # Scale Functions for Visualization
 
 
 ## ----Connect to Spotify API-----------------------------------------
+# Sign up and log in: https://developer.spotify.com/dashboard/
 Sys.setenv(SPOTIFY_CLIENT_ID = "your_spotify_client_id")
 Sys.setenv(SPOTIFY_CLIENT_SECRET = "your_spotify_client_secret")
 
