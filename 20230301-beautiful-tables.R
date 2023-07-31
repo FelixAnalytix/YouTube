@@ -18,6 +18,9 @@ library(scales) # Scale Functions for Visualization
 
 ## ----Connect to Spotify API-----------------------------------------
 # Sign up and log in: https://developer.spotify.com/dashboard/
+# Click on "Create App", and fill the necessary fields
+# NOTE: "Redirect URI" doesn't matter, you can fill it with "http://localhost:1410/"
+# In the "Settings" of the app, copy paste below "Client ID" and "Client secret"
 Sys.setenv(SPOTIFY_CLIENT_ID = "your_spotify_client_id")
 Sys.setenv(SPOTIFY_CLIENT_SECRET = "your_spotify_client_secret")
 
@@ -50,7 +53,8 @@ artists_image <- map_dfr(artists$id, get_artist_image)
 top_songs <- top_global %>%
   left_join(top_global_features, by = "id") %>%
   mutate(artist_first = map_chr(artist_names, first)) %>%
-  left_join(artists_image, by = c("artist_first" = "artist_name"))
+  left_join(artists_image %>% distinct_all(), #fix if duplicated images
+            by = c("artist_first" = "artist_name"))
 
 #write_csv(top_songs, "data/top_christmas_songs.csv")
 top_songs
