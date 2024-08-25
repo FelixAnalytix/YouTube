@@ -1,0 +1,22 @@
+---
+title: "How to Fully Automate Reports using R programming"
+author: "Felix Analytix"
+format: docx
+params:
+  name: "Luke Skywalker"
+  year: "2024"
+---
+
+Hello `{r} params$name`!
+
+## Sub section for `{r} params$year`
+
+Hello !
+
+```{r}
+library(dplyr)
+
+starwars |> 
+  dplyr::filter(name == params$name)
+```
+
